@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Webseite</title>
     <link rel="stylesheet" href="styles.css">
+    <script src='script.js' defer></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
 
     <!--Kontaktformular-->
     <footer id='contact'>
-        <form>
+        <form onsubmit='validiereFormular()'>
             <label for="name">Name:</label>
             <input type="text" id="name" name="Name">
             <label for="message">Nachricht:</label>
