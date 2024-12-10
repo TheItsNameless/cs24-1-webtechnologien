@@ -3,6 +3,11 @@
 // Projektdetails
 let projektInfos = ['Projekt 1 ist Toll!', 'Projekt 2 ist noch besser!'];
 
+fetch('projects.json')
+    .then((response) => response.text())
+    .then((text) => JSON.parse(text))
+    .then((data) => (projektInfos = data['projects']));
+
 function zeigeProjektDetails(event, index, projectDetails) {
     projectDetails.textContent = projektInfos[index];
 }
