@@ -3,7 +3,9 @@
 // Projektdetails
 let projektInfos = ['Projekt 1 ist Toll!', 'Projekt 2 ist noch besser!'];
 
-fetch('projects.json')
+fetch(
+    'https://raw.githubusercontent.com/TheItsNameless/cs24-1-webtechnologien/refs/heads/main/projects.json'
+)
     .then((response) => response.text())
     .then((text) => JSON.parse(text))
     .then((data) => (projektInfos = data['projects']));
