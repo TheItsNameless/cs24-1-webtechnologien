@@ -8,14 +8,23 @@
     font-family: Arial;
 }
 
+/*
+The Evil Code
+*:not(:has(*)):hover {
+    display: none;
+}
+*/
+
 body {
     background-image: url("wald.jpg");
 }
 
 header {
-    background-color: var(--background-color);
+    background-image: linear-gradient(to bottom right, var(--background-color), var(--secondary-color));
     color: white;
     text-align: center;
+    border-radius: 10px;
+    padding: 3%;
 }
 
 nav ul {
@@ -26,7 +35,7 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 10px;
-}   
+}
 
 nav ul li a {
     color: var(--primary-color);
@@ -36,6 +45,17 @@ nav ul li a {
 .projects-container {
     display: flex;
     gap: 20px;
+}
+
+#projects li:hover{
+    background-color: var(--primary-color);
+    border-radius: 5%;
+    transition: ease-in .3s;
+}
+
+#projects li {
+    width: fit-content;
+    transition: ease-out .3s;
 }
 
 .projects-list {
@@ -49,10 +69,22 @@ nav ul li a {
     padding-left: 10px;
 }
 
+#contact {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    width: 100%;
+    color: var(--primary-color);
+}
 
 form {
     display: flex;
     flex-direction: column;
+    background-color: var(--background-color);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 form label {
